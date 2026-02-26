@@ -1,0 +1,273 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 2rem;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    animation: slideUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.modal-header {
+    padding: 3rem 2rem 2rem;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    text-align: center;
+    position: relative;
+}
+
+.pokemon-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+}
+
+.pokemon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header-info h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+}
+
+.id-badge {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    color: var(--text-muted);
+}
+
+.types {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.type-badge {
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.info-section {
+    margin-bottom: 2rem;
+}
+
+.info-section h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.stat-item {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-item .label {
+    font-size: 0.8rem;
+    color: var(--text-main);
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.stat-item .value {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.4rem 1rem;
+    border-radius: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.tag.ability {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.tag.move {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Type backgrounds (consistent with card) */
+.normal {
+    background: #A8A77A;
+}
+
+.fire {
+    background: #EE8130;
+}
+
+.water {
+    background: #6390F0;
+}
+
+.electric {
+    background: #F7D02C;
+}
+
+.grass {
+    background: #7AC74C;
+}
+
+.ice {
+    background: #96D9D6;
+}
+
+.fighting {
+    background: #C22E28;
+}
+
+.poison {
+    background: #A33EA1;
+}
+
+.ground {
+    background: #E2BF65;
+}
+
+.flying {
+    background: #A98FF3;
+}
+
+.psychic {
+    background: #F95587;
+}
+
+.bug {
+    background: #A6B91A;
+}
+
+.rock {
+    background: #B6A136;
+}
+
+.ghost {
+    background: #735797;
+}
+
+.dragon {
+    background: #6F35FC;
+}
+
+.steel {
+    background: #B7B7CE;
+}
+
+.fairy {
+    background: #D685AD;
+}

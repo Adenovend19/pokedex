@@ -1,0 +1,32 @@
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem 0px 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.app-footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    color: var(--text-muted);
+}
+
+.app-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.app-footer a:hover {
+    opacity: 0.8;
+}

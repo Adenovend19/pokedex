@@ -1,0 +1,29 @@
+<div class="pokedex-container">
+    <div *ngIf="loading" class="loader-container">
+        <div class="pokemon-loader"></div>
+        <p>Catching them all...</p>
+    </div>
+
+    <div *ngIf="!loading && displayedPokemon.length > 0" class="card-grid">
+        <app-pokemon-card *ngFor="let p of displayedPokemon" [pokemon]="p" (cardClick)="openDetails($event)">
+        </app-pokemon-card>
+    </div>
+
+    <nav *ngIf="!loading" class="pagination">
+        <button class="nav-btn" [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+            &larr;
+        </button>
+
+        <button *ngFor="let page of paginationButtons" class="page-btn" [class.active]="page === currentPage"
+            [disabled]="page === currentPage" (click)="changePage(page)">
+            {{ page }}
+        </button>
+
+        <button class="nav-btn" [disabled]="currentPage === totalPages" (click)="changePage(currentPage + 1)">
+            &rarr;
+        </button>
+    </nav>
+
+    <app-pokemon-modal *ngIf="selectedPokemon" [pokemon]="selectedPokemon" (close)="selectedPokemon = null">
+    </app-pokemon-modal>
+</div>
