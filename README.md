@@ -91,11 +91,10 @@ src/app/
 
 ---
 
-## 📦 Deployment (Panduan Hosting)
+## 📦 Deployment
 
-This project can be easily deployed to:
-- **[Vercel](https://vercel.com/) / [Netlify](https://www.netlify.com/)**: Connect your GitHub repo and use `npm run build` as the build command.
-- **[GitHub Pages](https://pages.github.com/)**: Use the `angular-cli-ghpages` tool.
+This project deployed to:
+- **[Vercel](https://pokedex-adn.vercel.app) 
 
 ```bash
 # Build with base-href for subdirectory hosting
