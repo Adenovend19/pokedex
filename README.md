@@ -94,7 +94,7 @@ src/app/
 ## 📦 Deployment
 
 This project deployed to:
-- **[Vercel](https://pokedex-adn.vercel.app) 
+- [Pokedex Vercel](https://pokedex-adn.vercel.app) 
 
 ```bash
 # Build with base-href for subdirectory hosting
